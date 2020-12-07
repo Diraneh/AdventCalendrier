@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Calendrier de l'avent 2021</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="AutoRefresh.js"></script>
+    <script src="aleatoire.js"></script>
+</head>
+
+<body onload="JavaScript:AutoRefresh(10000);">
+    
+    <div class="jumbotron text-center" style="margin-bottom:0; background-color: darkred; color: white;">
+        <h1>Calendrier de l'avent 2021</h1>
+        <center>
+            <p class="merry">Merry Christmas</p>
+        </center>
+    </div>
+
+    <div class="container-fluid" style="margin-top:30px" id="app">
+
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12" v-for="message in messages">
+
+    
+
+
+
+
+
+                <a href="" data-toggle="modal" data-target="#m" @click="setModal(message)"> <img
+                        v-bind:src="message.image" class="img-fluid mx-auto d-block"> </a>
+
+                <div id="alea">
+                    <div id="ale">
+                        <div id="alee">
+                            <div id="aleee">
+                                <div id="aleea">
+                                    <div id="aleeb">
+                                        <div id="aleec">
+
+                                            <div id="aleed">
+                                                <div id="aleef">
+                                                    <div id="aleeg">
+
+                                                        <div id="aleeh">
+                                                            <div id="aleei">
+                                                                <div id="aleej">
+
+                                                                    <div id="alea1">
+                                                                        <div id="ale2">
+                                                                            <div id="alee3">
+                                                                                <div id="aleee4">
+                                                                                    <div id="aleea5">
+                                                                                        <div id="aleeb6">
+                                                                                            <div id="aleec7">
+
+                                                                                                <div id="aleed8">
+
+                                                                                                    <div id="aleef9">
+                                                                                                        <div
+                                                                                                            id="aleeg10">
+
+                                                                                                            <div
+                                                                                                                id="aleeh11">
+                                                                                                                <div
+                                                                                                                    id="aleei12">
+                                                                                                                    <div
+                                                                                                                        id="aleej13">
+
+
+
+
+                                                                                                                        <div
+                                                                                                                            id="aleea11">
+                                                                                                                            <div
+                                                                                                                                id="ale22">
+                                                                                                                                <div
+                                                                                                                                    id="alee33">
+                                                                                                                                    <div
+                                                                                                                                        id="aleee44">
+                                                                                                                                        <div
+                                                                                                                                            id="aleea55">
+                                                                                                                                            <div
+                                                                                                                                                id="aleeb66">
+                                                                                                                                                <div
+                                                                                                                                                    id="aleec77">
+
+
+
+
+
+
+
+
+
+                                                                                                                                                    <div
+                                                                                                                                                        id="aleea111">
+                                                                                                                                                        <div
+                                                                                                                                                            id="ale222">
+                                                                                                                                                            <div
+                                                                                                                                                                id="alee333">
+                                                                                                                                                                <div
+                                                                                                                                                                    id="aleee444">
+                                                                                                                                                                    <div
+                                                                                                                                                                        id="aleea555">
+                                                                                                                                                                        <div
+                                                                                                                                                                            id="aleeb666">
+
+
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div>
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal" id="m">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Coche la bonne réponse</h4> <button type="button"
+                                            class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div v-html="modal"></div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">
+                                               
+                                                    <p id="1a"><input type="checkbox" name="reponse2"> Vrai</p>
+                                                    <p id="1b"><input type="checkbox" name="reponse1"> Faux<br>
+                                                    </p>
+
+                                                    <p id="2a"><input type="checkbox" name="reponse1"> Le grand fessier
+                                                       </p>
+                                                    <p id="2b"><input type="checkbox" name="reponse2"> Le grand dorsal
+                                                        </p>
+                                                    <p id="3b"><input type="checkbox" name="reponse2"> Regarder la télévision</p>
+                                                    <p id="3a"><input type="checkbox" name="reponse1"> Attendre au feu rouge<br>
+                                                    </p>
+                                                    <p id="4a"><input type="checkbox" name="reponse1"> Mc Donalds
+                                                        </p>
+                                                    <p id="4b"><input type="checkbox" name="reponse2"> Toys'R 
+                                                        Us</p>
+
+                                                    <p id="5b"><input type="checkbox" name="reponse2"> retourne un tableau en php</p>
+                                                    <p id="5a"><input type="checkbox" name="reponse1"> n'existe pas en php<br>
+                                                    </p>
+
+                                                    <p id="6a"><input type="checkbox" name="reponse1"> $b->children("livre")
+                                                       </p>
+                                                    <p id="6b"><input type="checkbox" name="reponse2"> $_XML['livre"]
+                                                        </p>
+                                                    <p id="7b"><input type="checkbox" name="reponse2"> 8</p>
+                                                    <p id="7a"><input type="checkbox" name="reponse1"> 9<br>
+                                                    </p>
+
+                                                    <p id="8b"><input type="checkbox" name="reponse2"> Je suis le fils de Alain
+                                                        </p>
+                                                    <p id="8a"><input type="checkbox" name="reponse1"> Je suis le frère de Alain
+                                                    </p>
+                                                    <p id="9b"><input type="checkbox" name="reponse2"> $_SERVER[VERSION] </p>
+                                                    <p id="9a"><input type="checkbox" name="reponse1"> phpinfo()<br>
+                                                    </p>
+
+                                                    <p id="10b"><input type="checkbox" name="reponse1"> Oui,ce serait la moindre des choses
+                                                     </p>
+                                                    <p id="10a"><input type="checkbox" name="reponse2"> Non, quelle idée</p>
+                                                    <p id="11b"><input type="checkbox" name="reponse2"> navigator.os
+
+                                                    </p>
+                                                    <p id="11a"><input type="checkbox" name="reponse1"> navigator.platform 
+
+                                                        <br>
+                                                    </p>
+
+                                                    <p id="12a"><input type="checkbox" name="reponse1"> XMLHttpRequest
+                                                        </p>
+                                                    <p id="12b"><input type="checkbox" name="reponse2"> http_get_request
+                                                    </p>
+                                                    <p id="13a"><input type="checkbox" name="reponse2"> sérialiser un tableau en texte JSON
+                                                        </p>
+
+                                                    <p id="13b"><input type="checkbox" name="reponse1"> convertir du JSON en tableau
+                                                       </p>
+                                                    <p id="14b"><input type="checkbox" name="reponse2"> Le signe deux points (:) 
+                                                    </p>
+                                                    <p id="14a"><input type="checkbox" name="reponse2"> Le signe espace ( )
+                                                        </p>
+
+                                                    <p id="15b"><input type="checkbox" name="reponse1">  Une ligne de la table.
+                                                        </p>
+                                                    <p id="15a"><input type="checkbox" name="reponse2">  Une table
+                                                        </p>
+                                                    <p id="16b"><input type="checkbox" name="reponse1"> Le nombre total d'uplets de la relation
+                                                        </p>
+                                                    <p id="16a"><input type="checkbox" name="reponse2">   Le nombre total d'attributs de la relation 
+                                                    </p>
+
+                                                    <p id="17a"><input type="checkbox" name="reponse2"> wp-config.php
+                                                        </p>
+                                                    <p id="17b"><input type="checkbox" name="reponse1"> init.php
+
+                                                        </p>
+                                                    <p id="18a"><input type="checkbox" name="reponse2"> Vrai
+                                                    </p>
+
+                                                    <p id="18b"><input type="checkbox" name="reponse2"> Faux
+                                                        </p>
+                                                    <p id="19b"><input type="checkbox" name="reponse1">  2
+                                                        </p>
+                                                    <p id="19a"><input type="checkbox" name="reponse2"> 3
+                                                    </p>
+                                                    <p id="20b"><input type="checkbox" name="reponse2"> 19
+                                                    </p>
+                                                    <p id="20a"><input type="checkbox" name="reponse2"> 20
+
+                                                    <p id="21b"><input type="checkbox" name="reponse1"> Maison
+                                                        </p>
+                                                    <p id="21a"><input type="checkbox" name="reponse1"> Soleil
+                                                    </p>
+                                                    </p>
+                                                    <p id="22a"><input type="checkbox" name="reponse2"> 2
+                                                        </p>
+
+                                                    <p id="22b"><input type="checkbox" name="reponse2"> 5
+                                                    </p>
+                                                    <p id="23b"><input type="checkbox" name="reponse1"> Une poubelle
+                                                       </p>
+                                                    <p id="23a"><input type="checkbox" name="reponse2"> L'ancre
+                                                        </p>
+                                                    <p id="24b"><input type="checkbox" name="reponse2"> Les lettres
+                                                    </p>
+                                                    <p id="24a"><input type="checkbox" name="reponse1"> Les lèvres<br>
+                                                    </p>
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Fermer</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <script type="text/javascript">
+                        var no = 40;
+                        var delai = 10;
+                        var dx = new Array(),
+                            xp = new Array(),
+                            yp = new Array();
+                        var am = new Array(),
+                            stx = new Array(),
+                            sty = new Array();
+                        var i;
+                        larg_fenetre = (document.body.offsetWidth < window.innerWidth) ? window.innerWidth : document
+                            .body.offsetWidth;
+                        haut_fenetre = (document.body.offsetHeight < window.innerHeight) ? window.innerHeight : document
+                            .body.offsetHeight;
+
+                        for (i = 0; i < no; i++) {
+                            dx[i] = 0;
+                            xp[i] = Math.random() * (larg_fenetre - 40);
+                            yp[i] = Math.random() * haut_fenetre;
+                            am[i] = Math.random() * 20;
+                            stx[i] = 0.02 + Math.random() / 10;
+                            sty[i] = 0.7 + Math.random();
+
+                            obj = document.getElementsByTagName('body')[0];
+                            para = document.createElement("img");
+                            para.setAttribute("src", "img/neige89.gif");
+                            para.setAttribute("id", "dot" + i);
+                            para.style.position = "absolute";
+                            para.style.zIndex = "2";
+                            obj.appendChild(para);
+                        }
+
+                        function neige() {
+                            for (i = 0; i < no; i++) {
+                                dx[i] += stx[i];
+                                yp[i] += sty[i];
+                                if (yp[i] > haut_fenetre + 350) {
+                                    xp[i] = Math.random() * (larg_fenetre - am[i] - 40);
+                                    yp[i] = 0;
+                                }
+
+                                document.getElementById("dot" + i).style.top = yp[i] + "px";
+                                document.getElementById("dot" + i).style.left = xp[i] + am[i] * Math.sin(dx[i]) + "px";
+                            }
+                            setTimeout("neige()", delai);
+                        }
+
+                        neige();
+                    </script>
+
+                    <script>
+                        aleatoire();
+                    </script>
+
+
+</body>
+
+</html>
